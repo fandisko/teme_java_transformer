@@ -12,7 +12,7 @@ public class Pizza extends Products {
     public Pizza (){
         ingredients.add(new Bacon());
         ingredients.add(new Water());
-        this.name="Products.Pizza";
+        this.name="Pizza";
         this.category= Category.Food;
     }
 

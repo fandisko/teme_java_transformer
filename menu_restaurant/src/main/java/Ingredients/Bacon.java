@@ -8,7 +8,7 @@ public class Bacon implements Ingredient{
 
     @Override
     public double price() {
-        return 1.5;
+        return 15;
     }
 
     @Override

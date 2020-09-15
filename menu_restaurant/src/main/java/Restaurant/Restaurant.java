@@ -18,6 +18,9 @@ public class Restaurant {
         System.out.println("=============");
         restaurant.modifyMenu();
         restaurant.displayMenu();
+        System.out.println("=============");
+        Search.searchMenu("Lemonade");
+        Search.searchMenu("Shaorma");
     }
 
     public void displayMenu() {
