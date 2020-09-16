@@ -1,14 +1,14 @@
 package Ingredients;
 
-public class Bacon implements Ingredient {
+public class Orange implements Ingredient {
     @Override
     public String name() {
-        return "Bacon";
+        return "Orange";
     }
 
     @Override
     public double price() {
-        return 15;
+        return 2.0;
     }
 
     @Override

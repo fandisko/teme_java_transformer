@@ -1,8 +1,9 @@
 package Ingredients;
 
+import Products.Category;
 import Restaurant.Restaurant;
 
-public class Water implements Restaurant.Menu,Ingredient{
+public class Water implements Restaurant.Menu, Ingredient {
 
     @Override
     public String name() {
@@ -12,6 +13,11 @@ public class Water implements Restaurant.Menu,Ingredient{
     @Override
     public double price() {
         return 5;
+    }
+
+    @Override
+    public Category category() {
+        return Category.Drinks;
     }
 
     @Override

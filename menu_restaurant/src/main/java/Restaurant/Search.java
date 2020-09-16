@@ -10,9 +10,9 @@ public class Search extends Restaurant {
             }
         }
         if (flag) {
-            System.out.println("Produsul este prezent in meniu! " + search);
+            System.out.println("Produsul " + search + " este prezent in meniu!");
         } else {
-            System.out.println("Produsul nu este in meniu! " + search);
+            System.out.println("Produsul " + search + "nu este in meniu! ");
         }
 
     }

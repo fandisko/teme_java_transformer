@@ -13,19 +13,25 @@ public class Restaurant {
     public static void main(String[] args) {
         Restaurant restaurant = new Restaurant();
         MenuList.add(new Pizza());
+        MenuList.add(new Pancakes());
+        MenuList.add(new Water());
         MenuList.add(new Lemonade());
+        MenuList.add(new OrangeJuice());
+        System.out.println("===INITIAL MENU===");
         restaurant.displayMenu();
         System.out.println("=============");
+        System.out.println("===MODIFIED MENU===");
         restaurant.modifyMenu();
         restaurant.displayMenu();
         System.out.println("=============");
+        System.out.println("===SEARCH RESULTS===");
         Search.searchMenu("Lemonade");
         Search.searchMenu("Shaorma");
     }
 
     public void displayMenu() {
         for (Menu a : MenuList) {
-            System.out.println(a.name() + " " + " " + a.price());
+            System.out.println(a.name() + " " + a.category() + " " + a.price());
         }
 
     }
@@ -35,12 +41,16 @@ public class Restaurant {
     }
 
     public void modifyMenu() {
-        addMenu(new Pizza("Pizza2", Arrays.<Ingredient>asList(new Bacon()), Category.Food));
+        addMenu(new Pizza("Pizza Marguerita", Arrays.<Ingredient>asList(new Bacon(), new Ketchup(), new Flour()), Category.Food));
     }
 
     public interface Menu {
         String name();
+
         double price();
+
+        Category category();
+
         double quantity();
     }
 }
