@@ -3,7 +3,7 @@ package designpattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubmitComanda {
+public class SubmitComanda extends Thread {
     private List<Comanda> listaComenzi= new ArrayList<Comanda>();
 
     public void lansareComanda(Comanda comanda){
@@ -12,8 +12,7 @@ public class SubmitComanda {
         System.out.println("-------------------");
     }
 
-    public void proceseazaComanda (){
-
+    public void run (){
         for (Comanda c : listaComenzi){
             c.procesare();
             System.out.println("Se proceseaza comanda " + c.getComanda());
